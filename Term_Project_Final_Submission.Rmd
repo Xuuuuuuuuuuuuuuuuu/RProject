@@ -1,0 +1,331 @@
+---
+title: "The study of the relationship between mental health of Chinese between 20-30 years old and gut microbiome diversity."
+author: "Yiran Xu"
+date: "2023.6.9"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(eval = TRUE)
+knitr::opts_chunk$set(error = TRUE)
+```
+
+```{r main instructions, include=FALSE}
+# Final Term Project Write-up Instructions
+
+#Please complete the following:
+
+#1.  Each section will have headings and 1-2 code blocks. Do not edit the headings for each section (anything with one or more #'s at the start of the line. The first code block will be instructions for that section and will not be knit into the final document. The second code block (if present) will be for you to include your own code needed to complete the section. It will be knitted and presented in the final document. 
+
+#2.  Examine all the feedback you got on checkpoint 1, 2, and 3. Do you need to modify your question, prediction, hypothesis, experimental design, or analytical plan? This term paper will be graded on its own merit, separate from how you did on any of the checkpoints. You are not held to the decisions you made on previous checkpoints. You are only required to use the same primary statistical test that you included on the survey generating your simulated data.
+
+#3. Make any citations as needed. You must include inline citations (Author, year), as well as an APA formatted bibliography at the end. This includes any URLs where you copied code. You do not need to cite any course materials. Remember, copying code is encouraged. It's your words that need to be original.
+
+#4. Feel free to copy and paste anything you'd like from your previous checkpoint assignments.
+
+#5.  Knit your .RMD document as an html and submit it on Canvas. It is due Sunday June 5th at 11:59PM PST. Be aware that late penalties will be assessed.
+```
+
+```{r Section1 instructions, include=FALSE}
+#Below the appropriate headings, write in your responses.
+
+#The Question: Write out your overall biological question in a single sentence.
+
+#Disclaimer: Do not edit this text:
+
+#Rationale and Background: Include here a short paragraph (~300-500 words) providing basic, relevant background and your rationale for asking the question. Pretend your audience is a UCSD undergraduate first-year biology major.
+
+
+```
+
+# [The Question]{.ul}
+
+What is the difference in gut microbiome diversity (a count data) between Chinese w+/wo mental illness (a catagorical data) from 20-30 years old.
+
+#### Disclaimer: 
+
+This project analyzes simulated data. The questions and hypotheses are real, but the results and conclusions are not.
+
+### *Sub-Field of Biology:*
+
+Microbiology
+
+### *Rationale and Background:*
+
+It is surprising to know that the number of microbiomes living with a person is ten times as much as the number of human cells. The huge amount of microorganism population is therefore very important in overall physiological activities. According to Megan et al. (2017), more and more evidence has shown the bidirectional communication between nervous systems and gut microbiota, which is also called the gut-brain-axis, suggesting a growing interest in this research field. Evidence provided by Philip (2018) has shown that the gut microbiota actively interacts with the nervous system by influencing neurotransmitter production, immune responses, and inflammatory processes that are closely tied to mental health. Specifically, Microbes in the gut produce a variety of neuroactive compounds, which serve as analogue of neurotransmitter, such as serotonin, dopamine, and gamma-aminobutyric acid (GABA), which are essential for regulating mood, cognition, and behavior. Therefore, both alterations or lack in the gut microbiome composition have been associated with an increased risk of mental health disorders, including anxiety, depression, and even neurodevelopmental disorders. In addition, in recent years, the prevalence of mental illness has witnessed a staggering rise, with factors such as life stress, academic pressure, and even cyber violence contributing to this surge. Understanding the physiological mechanisms underlying mental illness has become an urgent and critical endeavor.  Besides, there are treatment for patient suffering from mental disease by approaches such as dietary interventions, prebiotic and probiotic supplementation, and fecal microbiota transplantation (FMT). FMT is a method that transplant the microbiota from excrement of people who is mentally healthy. This approach is based on the theory that microbiome is essential in human mental health. Therefore, having a insight into the mechanism of how microbiome influence human's mental health help us find more efficient solution to give treatment to those who suffer from mental illness.
+
+------------------------------------------------------------------------
+
+```{r Section2 instructions, include=FALSE}
+#This section is the same as it was in first checkpoint. However, you may want to change your chosen paper if you have found any that are more relevant to your current project.
+
+```
+
+# [Examples of relevant literature]{.ul}
+
+### *Review article title:*
+
+A systematic review of gut microbiota composition in observational studies of major depressive disorder, bipolar disorder and schizophrenia.
+
+#### URL:
+
+https://www.nature.com/articles/s41380-022-01456-3
+
+#### Abstract:
+
+The emerging understanding of gut microbiota as ‘metabolic machinery’ influencing many aspects of physiology has gained substantial attention in the field of psychiatry. This is largely due to the many overlapping pathophysiological mechanisms associated with both the potential functionality of the gut microbiota and the biological mechanisms thought to be underpinning mental disorders. In this systematic review, we synthesised the current literature investigating differences in gut microbiota composition in people with the major psychiatric disorders, major depressive disorder (MDD), bipolar disorder (BD) and schizophrenia (SZ), compared to ‘healthy’ controls. We also explored gut microbiota composition across disorders in an attempt to elucidate potential commonalities in the microbial signatures associated with these mental disorders. Following the PRISMA guidelines, databases were searched from inception through to December 2021. We identified 44 studies (including a total of 2510 psychiatric cases and 2407 controls) that met inclusion criteria, of which 24 investigated gut microbiota composition in MDD, seven investigated gut microbiota composition in BD, and 15 investigated gut microbiota composition in SZ. Our syntheses provide no strong evidence for a difference in the number or distribution (α-diversity) of bacteria in those with a mental disorder compared to controls. However, studies were relatively consistent in reporting differences in overall community composition (β-diversity) in people with and without mental disorders. Our syntheses also identified specific bacterial taxa commonly associated with mental disorders, including lower levels of bacterial genera that produce short-chain fatty acids (e.g. butyrate), higher levels of lactic acid-producing bacteria, and higher levels of bacteria associated with glutamate and GABA metabolism. We also observed substantial heterogeneity across studies with regards to methodologies and reporting. Further prospective and experimental research using new tools and robust guidelines hold promise for improving our understanding of the role of the gut microbiota in mental and brain health and the development of interventions based on modification of gut microbiota.
+
+### *Relevant original research article title:*
+
+The gut microbiota and mental health in adults.
+
+#### URL:
+
+https://reader.elsevier.com/reader/sd/pii/S0959438820300362?token=E77CE28C78156EDC1F67C1B9222809EE7344364B89CD5F31D119173DAE6B52DCA1431A155136DF6B3E6C12AD1812D9CB&originRegion=us-east-1&originCreation=20230430220839
+
+#### Abstract:
+
+A growing body of evidence point toward the bidirectional gut microbiota–brain axis playing a role in mental health. Most of this research is conducted on animals why we in this review summarize and comment upon recent studies evaluating the gut microbiome in mental health in humans. Further support for the relevance of the bidirectional gut microbiota–brain communication in mood disorders has been presented, such as the effect of probiotics on brain connectivity and mental health outcomes and pregnancy related stress on gut microbiota in the newborn child. However, the heterogeneity between studies precludes conclusions regarding differences in microbiota composition in mental disease and health and many of the studies are limited by a cross-sectional design, small sample sizes and multiple comparisons. Thus, well-designed longitudinal studies with larger sample size, accounting for confounders are needed.
+
+------------------------------------------------------------------------
+
+```{r Section3 instructions, include=FALSE}
+#Fill out the following sections. Each should only be a single sentence.
+
+
+```
+
+# [**Hypotheses**]{.ul}
+
+### *The Biological Hypothesis:*
+
+Microbiome secretions, which might be neurotransmitter analogous, act on receptors on synapses cooperatively so that keep human mental state in balance.
+
+### *The Biological Prediction:*
+
+Individuals without mental illness have more gut microbes than that of individuals with mental illness.
+
+### *A Statistical Alternative Hypothesis:*
+
+There is difference in gut microbiome diversity among Chinese w+/wo mental illness from 20-30 year old.
+
+### *A Statistical Null Hypothesis:*
+
+There is no difference in gut microbiome diversity among Chinese w+/wo mental illness from 20-30 year old.
+
+------------------------------------------------------------------------
+
+```{r Section4 instructions, include=FALSE}
+
+#You will also use this page to describe your overall experimental design. Each should be written in paragraph form and can be up to 300 words max. If appropriate, it should cover each of the following issues: randomization, blocking, stratification, controls (positive and/or negative), blinding. Make sure that this description matches the data you will be analyzing, not a bigger experiment with more variables that you will not have data for.
+
+#Explanatory and Response Variables - explicitly and simply state your explanatory/independent/x variable and your response/dependent/y variable.
+
+#Sample size - include a description of your sample size and a justification for your choice.
+
+```
+
+# [Experimental Design]{.ul}
+
+This experiment aims to examine the level of gut microbiome diversity in those who suffeer from mental illness to find if there is a causal relationship between gut microbiome diversity and metal state. To realize the goal, we should first randomly choose those patient with mental illness from different hospital in China from 20-30 year old. The reason why my samples are not from all over the world is because there might be a relatively large difference in base value of gut microbiome diversity among different countries. Before treatment, we examine microbiome diversity in each indiudual. Then they accept cure as treatment. Several months/years later, we only examine the microbiome diversity from those individual who recover from mental illness and remove others data from the experiment. Then the microbiome diversity data is compared individually before and after treatment to see if there is a difference in mean value of two groups of data. In this experiment, the data before treatment is regarded as control group, and the data after treatment is regarded as treatment group. We may consider stratifying the data based on relevant clinical factors, such as age, gender, and diagnosis, to better understand the relationship between gut microbiome diversity and mental state so that the blocking within each layer is also realized. In this case, the control will be considered as negative. Scientists and participants should not be able to identify which group and individual is in.
+
+### *Sampling Design:*
+
+Probability sampling. Each member of the population has a known chance of being selected for the sample.
+
+### *Explanatory and Response Variables:*
+
+Explanatory Variables: mental state
+Response Variables: Gut microbiome diversity (in terms of number of types of microbiome)
+
+
+### *Sample size:*
+
+1000. In the article "Gut microbiome-wide association study of depressive symptoms", there are two rounds of experiment, which have sample sizes of 1,054 and 1,539, respectively. However, the effect size in this study is small. The author tried to find a relationship between diversity of certain group of bacteria and depression. The model ended up with R^2 = 0.003, which means the change in number of that group of becteria does not result in much change in depression level.
+
+### *Alpha:*
+
+0.05, it is a typical cut-off value in biological field
+
+------------------------------------------------------------------------
+
+```{r Section5 instructions, include=FALSE}
+
+#Primary statistical analysis: Name the analysis you included on the survey form. In the next line, include a brief justification as to why this test is appropriate.
+
+```
+
+# [Data Analysis Plan]{.ul}
+
+Paired t-test
+
+The research question focuses on comparing the mean value of microbiome diversity before and after treatment, rather than examining the relationship between two continuous variables. In addition, the data before and after treatment are from the same group of people, which means that the data before and after treatment is related. Therefore, the paired t test is the most appropriate method.
+------------------------------------------------------------------------
+
+```{r Section6 instructions, include=FALSE}
+
+#Assumptions and EDA: List the assumptions of your chosen test here.
+
+#Enter your code for all testing of assumptions and figures for EDA in the next code block. This will include reading in your data and making it tidy. You should also display the top of your data table - head(). Any figures you make or statistics your code creates should be labeled appropriately. It should be understandable to someone that does not have access to read your code.
+
+
+#After the code block, write a paragraph discussing your EDA results and if you had to do anything regarding outliers or data transformations. Remember to justify all of your decisions in writing.
+
+```
+
+# [Assumptions and Exploratory Data Analysis (EDA)]{.ul}
+
+Assumption: The mean of data from individuals before treatment is significantly smaller than it after treatment.
+
+```{r Section6 STUDENT CODE BLOCK1, attr.source='.numberLines', include=TRUE}
+## Load package
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+
+## Read table
+micro_Data<-read.csv("Microbiome_diversity.csv")
+head(micro_Data)
+
+## Visualization using bar plot
+Histogram_before<-ggplot(data = micro_Data, mapping = aes(x=Before.treatment)) +
+  geom_histogram(color="black",fill="darkgreen")+
+  xlab("Microbiome diversity")
+Histogram_before
+
+Histogram_after<-ggplot(data = micro_Data, mapping = aes(x=After.treatment)) +
+  geom_histogram(color="black",fill="darkgreen")+
+  xlab("Microbiome diversity")
+Histogram_after ## They failed eyeball test 
+
+## Check normality for data before treatment
+ks.test(micro_Data$Before.treatment,"pnorm", mean=mean(micro_Data$Before.treatment), sd=sd(micro_Data$Before.treatment))
+
+## Check normality for data after treatment
+ks.test(micro_Data$After.treatment,"pnorm", mean=mean(micro_Data$After.treatment), sd=sd(micro_Data$After.treatment)) ## They failed ks test. Therefore, Both data are not normal
+
+## Log Transformation
+micro_Data_Trans<-micro_Data %>%
+  mutate(Transformed_After.treatment = log(After.treatment)) %>%
+  mutate(Transformed_Before.treatment = log(Before.treatment))
+  
+## Visualization using bar plot after transformation
+Histogram_trans_before<-ggplot(data = micro_Data_Trans, mapping = aes(x=Transformed_Before.treatment)) +
+  geom_histogram(color="black",fill="darkgreen")+
+  xlab("Microbiome diversity")
+Histogram_trans_before
+
+Histogram_trans_after<-ggplot(data = micro_Data_Trans, mapping = aes(x=Transformed_After.treatment)) +
+  geom_histogram(color="black",fill="darkgreen")+
+  xlab("Microbiome diversity")
+Histogram_trans_after
+  
+## Test normality after log transformation
+ks.test(micro_Data_Trans$Transformed_After.treatment,"pnorm", mean=mean(micro_Data_Trans$Transformed_After.treatment), sd=sd(micro_Data_Trans$Transformed_After.treatment))
+
+ks.test(micro_Data_Trans$Transformed_Before.treatment,"pnorm", mean=mean(micro_Data_Trans$Transformed_Before.treatment), sd=sd(micro_Data_Trans$Transformed_Before.treatment)) ## Both groups of data pass eyeball test and ks test.
+
+## Evaluate outlier
+threshold_upper <- mean(micro_Data_Trans$Transformed_Before.treatment) + 2 * sd(micro_Data_Trans$Transformed_Before.treatment)
+threshold_lower <- mean(micro_Data_Trans$Transformed_Before.treatment) - 2 * sd(micro_Data_Trans$Transformed_Before.treatment)
+
+outliers_before <- micro_Data_Trans$Transformed_Before.treatment[micro_Data_Trans$Transformed_Before.treatment > threshold_upper|micro_Data_Trans$Transformed_Before.treatment < threshold_lower]
+
+mean(outliers_before)
+mean(micro_Data_Trans$Transformed_Before.treatment)
+
+threshold_upper_after <- mean(micro_Data_Trans$Transformed_After.treatment) + 2 * sd(micro_Data_Trans$Transformed_After.treatment)
+threshold_lower_after <- mean(micro_Data_Trans$Transformed_After.treatment) - 2 * sd(micro_Data_Trans$Transformed_After.treatment)
+
+outliers_after <- micro_Data_Trans$Transformed_After.treatment[micro_Data_Trans$Transformed_After.treatment > threshold_upper_after|micro_Data_Trans$Transformed_After.treatment < threshold_lower_after]
+
+mean(outliers_after)
+mean(micro_Data_Trans$Transformed_After.treatment)
+
+## Create tidy table
+tidy_micro_trans<-pivot_longer(micro_Data_Trans, cols = c("Transformed_Before.treatment","Transformed_After.treatment"), names_to = "w+/wo treatment", values_to = "trans_micro_diversity")[,-c(1,2,3)]
+
+
+```
+
+### *Interpretation of EDA:*
+
+In the process of EDA, I first did eyeball test and ks test separately on data from individuals before treatment and after treatment. The shape of the bar plot and p-value of ks test suggest the data are not normally distributed. Then log transformation is done separately on two groups of data. Then eyeball test and ks test are done on the transformed data. The shape of bar plot and p-value of ks test suggest the transformed data are normally distributed. Then the data is tidied for paired t test. The evaluation on outliers is also done. In this case, we don't do any treatment to outliers, as the difference in mean of outliers and other data within group is much smaller than the difference in mean between groups.
+
+------------------------------------------------------------------------
+
+```{r Section7 instructions, include=FALSE}
+#Primary Statistical Analysis: In the next code block, you will conduct your primary statistical test and any necessary post-hoc tests. Do NOT include your own written interpretation here.
+```
+
+
+# [Primary Statistical Analysis]{.ul}
+
+```{r Section7 STUDENT CODE BLOCK2, attr.source='.numberLines', include=TRUE}
+## paired t test
+paired_t<-t.test(tidy_micro_trans$trans_micro_diversity~tidy_micro_trans$`w+/wo treatment`,paired=TRUE) ## No post-hoc test is needed as there are just two groups of data and the difference in mean is already shown.
+
+## back transformation
+mean_before=mean(exp(micro_Data_Trans$Transformed_Before.treatment))
+mean_after=mean(exp(micro_Data_Trans$Transformed_After.treatment))
+
+mean_diff=mean_after-mean_before
+
+```
+
+------------------------------------------------------------------------
+
+
+```{r Section9 instructions, include=FALSE}
+
+#Primary Figure: In the next code block, you will create a single well-designed figure in ggplot that will clearly show a reader patterns in your data.
+
+```
+
+# [Data Visualization]{.ul}
+
+```{r Section9 STUDENT CODE BLOCK4, attr.source='.numberLines', include=TRUE}
+plot1 <- ggplot(tidy_micro_trans, aes(x=`w+/wo treatment`, y = trans_micro_diversity)) +
+  geom_boxplot(fill = c("Transformed_Before.treatment" = "#FF4F00", "Transformed_After.treatment" = "#6495ED"), color = "black") +
+  xlab("w+/wo treatment") +
+  ylab("Transformed microbiome diversity") +
+  scale_x_discrete(limits = c("Transformed_Before.treatment", "Transformed_After.treatment"), labels =     c("Transformed data before treatment", "Transformed data after treatment")) +
+  theme_classic()
+plot1  
+
+```
+
+------------------------------------------------------------------------
+
+```{r Section10 instructions, include=FALSE}
+
+#Conclusions: This is the section where you will use what you have learned in this course to make conclusions based on your results. What patterns/differences do you see in your data? How certain/uncertain are you in those results. THIS IS ONE OF THE MOST IMPORTANT SECTIONS OF THE TERM PROJECT. Demonstrate to us that you understand what your results can and cannot tell you. Make it as long as you need to.
+
+#Future Directions: Are there any confounding variables that your data/experimental design did not include? Briefly discuss what you would do differently if there were no restrictions placed on your design, aside from ethical and reasonable logistic considerations.
+
+#Citations: List citations in APA format.
+
+```
+
+# [Conclusions]{.ul}
+
+According to the p-value of paired t test(2.2e-16), we rejected the null hypothesis that there is no relationship between mental state and microbiome diversity. According to the mean difference, the difference in mean of transformed data is -0.591022. We are very certain about the difference as the probability of having this by chance is only 2.2e-16, accoring to p-value. By combining the result from back transformation, we learn that there is on average 45.17168 more microbiome in individual who suffer from mental illness than those without mental illness, which is completely contradictory to our assumption, which is there is a significant larger amount of microbiome in individual after treatment.
+
+------------------------------------------------------------------------
+
+# [Future Directions]{.ul}
+
+There are confounding factor, such as gender and age, which is excluded in this study and might influence the test result significantly. This study only discover the changing pattern of microbiome diversity of patient from having a mental illness to recovery. We may also study the changing pattern of that of patient through the process from mental health to a mental illness to make the result more convincing, without considering the ethical and reasonable logistic considerations.
+
+------------------------------------------------------------------------
+
+# [Citations]{.ul}
+
+Strandwitz, P. (2018). Neurotransmitter modulation by the gut microbiota. Brain Research, 1693, 128–133. https://doi.org/10.1016/j.brainres.2018.03.015 
+
+McGuinness, A. J., Davis, J. A., Dawson, S. L., Loughman, A., Collier, F., O’Hely, M., Simpson, C. A., Green, J., Marx, W., Hair, C., Guest, G., Mohebbi, M., Berk, M., Stupart, D., Watters, D., &amp; Jacka, F. N. (2022). A systematic review of gut microbiota composition in observational studies of major depressive disorder, bipolar disorder and schizophrenia. Molecular Psychiatry, 27(4), 1920–1935. https://doi.org/10.1038/s41380-022-01456-3 
+
+Järbrink-Sehgal, E., &amp; Andreasson, A. (2020). The gut microbiota and mental health in adults. Current Opinion in Neurobiology, 62, 102–114. https://doi.org/10.1016/j.conb.2020.01.016 
+
+Clapp, M., Aurora, N., Herrera, L., Bhatia, M., Wilen, E., &amp; Wakefield, S. (2017). Gut microbiota’s effect on Mental Health: The gut-brain axis. Clinics and Practice, 7(4), 987. https://doi.org/10.4081/cp.2017.987 
